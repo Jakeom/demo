@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Detail</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+    table, th, td {
+    border: 1px solid;
+    }
+    </style>
+</head>
+<body>
+
+    <table style="border: 1;">
+        
+            <tr th:each="instance : ${detail}" th:if="${'Ratings' ne instance.key}">
+                
+                <td th:text="${instance.key}"></td>
+                <td th:if="${'Poster' ne instance.key}" th:text="${instance.value}"></td>
+                <td th:if="${'Poster' eq instance.key}" ><img th:src="${instance.value}"></td>
+
+            </tr>
+            <tr>
+                <td>
+                    Ratings
+                </td>
+                <td>
+                    <div th:each="data : ${ratings}">
+                        <span th:text="|${data.Source}: ${data.Value}|"></span>
+                    </div>
+                </td>
+
+            </tr>
+        
+    </table>
+</body>
+</html>

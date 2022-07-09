@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+    table, th, td {
+    border: 1px solid;
+    }
+    </style>
+</head>
+<body>
+    <form action="/" method="get">
+        <input type="text" name="searchKey" id="searchKey" value/> <button>Search</button>
+    </form>
+    <table style="border: 1;">
+        <tr>
+            <th>Poster</th>
+            <th>Title</th>
+            <th>Year</th>
+            <th>imdbID</th>
+            <th>Type</th>
+        </tr>
+        
+        <tr th:each="data: ${dataList}" th:onclick="'window.location.href = \'' + @{/detail?searchKey={id}(id=${data.imdbID})} + '\''">
+            <td><img th:src="${data.Poster}" height="100px;"></td>
+            <td th:text="${data.Title}"></td>
+            <td th:text="${data.Year}"></td>
+            <td th:text="${data.imdbID}"></td>
+            <td th:text="${data.Type}"></td>            
+        </tr>
+        </div>
+    </table>
+    
+    
+</body>
+</html>
