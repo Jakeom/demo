@@ -7,9 +7,9 @@ phases:
   build:  
     commands:
       - java -version
-      - mvn install
+      - gradle build
 
 artifacts:
+  type: zip
   files:
-    - '**/*' 
-  base-directory: 'build'
+    - 'build/libs/*.jar'
