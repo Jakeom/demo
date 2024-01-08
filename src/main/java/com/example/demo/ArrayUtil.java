@@ -25,7 +25,7 @@ public class ArrayUtil
             for (int i=0, l=jArr.size(); i<l; i++){
                     list.add(convertMap((JsonObject)jArr.get(i)));
             }
-        } catch (Exception e) {}
+        } catch (Exception e) {System.out.println("1111");}
 
         return list;
     }
