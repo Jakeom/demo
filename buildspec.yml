@@ -5,7 +5,7 @@ phases:
     runtime-versions:
       java: corretto11
     commands:
-      - yum update
+      - yum update -y
       - yum install tree -y
   build:  
     commands:
