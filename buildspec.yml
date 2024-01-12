@@ -6,7 +6,7 @@ phases:
       java: corretto11
     commands:
       - yum update
-      - yum install tree
+      - yum install tree -y
   build:  
     commands:
       - tree ~/.pyenv -L 2
