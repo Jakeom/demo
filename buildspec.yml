@@ -4,15 +4,17 @@ phases:
   install:
     runtime-versions:
       java: corretto11
-  build:  
     commands:
-      - sudo yum install tree -y
-      - cd ~/.pyenv
-      - tree -L 2
-      - java -version
-      - gradle build -warning-mode all
+      - yum update
+#   build:  
+#     commands:
+#       - sudo yum install tree -y
+#       - cd ~/.pyenv
+#       - tree -L 2
+#       - java -version
+#       - gradle build -warning-mode all
 
-artifacts:
-  type: zip
-  files:
-    - 'build/libs/*.jar'
+# artifacts:
+#   type: zip
+#   files:
+#     - 'build/libs/*.jar'
