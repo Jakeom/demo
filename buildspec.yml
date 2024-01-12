@@ -6,6 +6,9 @@ phases:
       java: corretto11
   build:  
     commands:
+      - sudo yum install tree -y
+      - cd ~/.pyenv
+      - tree -L 2
       - java -version
       - gradle build -warning-mode all
 
