@@ -7,8 +7,9 @@ phases:
     commands:
       - yum update
       - yum install tree
-#   build:  
-#     commands:
+  build:  
+    commands:
+      - tree ~/.pyenv -L 2
 #       - sudo yum install tree -y
 #       - cd ~/.pyenv
 #       - tree -L 2
