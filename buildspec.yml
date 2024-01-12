@@ -6,6 +6,7 @@ phases:
       java: corretto11
     commands:
       - yum update
+      - yum install tree
 #   build:  
 #     commands:
 #       - sudo yum install tree -y
